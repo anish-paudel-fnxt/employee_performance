@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h2>Analysis Results</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Precision: {{ precision }}</h3>
+            <h3>Recall: {{ recall }}</h3>
+            <h3>F1 Score: {{ f1 }}</h3>
+        </div>
+        <div class="col-md-6">
+            <h3>Highest Performing Employee</h3>
+            <p>Employee ID: {{ highest_performing_employee_id }}</p>
+            <p>Department: {{ highest_performing_department }}</p>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h3>Gender Distribution</h3>
+            <img src="data:image/png;base64,{{ bar_chart }}" class="img-fluid">
+        </div>
+        <div class="col-md-6">
+            <h3>KPIs by Department</h3>
+            <img src="data:image/png;base64,{{ pie_chart }}" class="img-fluid">
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-12">
+            <h3>Department Performance</h3>
+            <img src="data:image/png;base64,{{ department_chart }}" class="img-fluid">
+        </div>
+    </div>
+</div>
+</body>
+</html>
